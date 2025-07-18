@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes-App</title>
+    <link rel="stylesheet" href="note.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    
+
+    <div class="wrapper">
+        <div class="note_title_holder"><h1 class="note_title">Notes application</h1></div>
+        <div class="main">
+            <div class="container">
+                <div class="createnotes"><i class="fa-solid fa-folder-plus create"></i><p class="headline1">create a new note</p></div>
+                <div class="mynotes"><i class="fa-solid fa-file-lines mynote"></i><p class="headline2">mynotes</p></div>
+            </div>
+        </div>
+
+        <!-- for new note -->
+         <div class="new_note_main">
+            <div class="new_note_container">
+                <div class="new_note_head">
+                    <input type="text" class="new_note_title" placeholder="title"> 
+                </div>
+                <div class="new_note_body">
+                    <textarea class="new_note_text" cols="120" rows="20" placeholder="note goes here"></textarea>
+                    <div class="new_note_control">
+                        <div><p class="quote">let's remember all the things</p></div>
+                        <div class="buttons">
+                            <div class="new_note_close"><i class="fa-solid fa-arrow-left goback"></i></span></div>
+                            <div class="new_note_save"><i class="fa-solid fa-check savenote"></i></span></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <!-- for mynotes -->
+    <div class="mynotes_main">
+        <div class="mynotes_container">
+            <div class="mynotes_body">
+                <h1 class="mynotes_heading">My Notes</h1>
+
+                <div class="mynotes_holder">\
+                    <h5 class="emptytext">Add Some Notes</h5>
+                </div>
+                
+                <div class="mynotes_control">
+                    <div><p class="quote">let's remember all the things</p></div>
+                    <div class="mynotes_close"><i class="fa-solid fa-arrow-left"></i></div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+     </div>
+</div>
+    
+<!-- toast notify -->
+ <div class="toast_holder">
+    <i class="fa-solid fa-circle-check toast_icon"></i>
+    <p>note-created</p>
+ </div>
+    <script src="notes.js"></script>
+</body>
+</html>

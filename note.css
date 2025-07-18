@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    background-color: rgba(94, 94, 196, 0.708);
+    height: 100vh;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.note_title_holder{
+    position: absolute;
+    top: 13%;
+    left: 26.5%;
+    width: fit-content;
+    height: 10vh;
+    color: rgba(21, 7, 49, 0.88);
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.note_title{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:xx-large;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-decoration: underline;
+}
+.container{
+    height: 55%;
+    width: 50%;
+    background-color: rgba(8, 8, 8, 0.604);
+    box-shadow: 10px 10px 50px rgb(78, 74, 74);
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0px 30px;
+}
+.createnotes{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px rgb(36, 33, 33);
+    height: 85%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mynotes{
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px rgb(36, 33, 33);
+    height: 85%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container i{
+    text-shadow: 10px 10px 50px rgba(36, 33, 33, 0.683);
+    font-size: 100px;
+    height: 40%;
+    width: 40%;
+    text-align: center;
+    padding-top: 5%;
+}
+.container i:hover{
+    cursor: pointer;
+}
+.headline1{
+    padding-top: 10px;
+    position: absolute;
+    top: 57%;
+    left: 33.5%;
+    font-weight: bold;
+    font-size: larger;
+}
+.headline2{
+    padding-top: 10px;
+    position: absolute;
+    top: 57%;
+    font-weight: bold;
+    font-size: larger;
+    
+}
+
+/* _new_note_css */
+
+.new_note_main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new_note_container{
+    height: 55%;
+    width: 50%;
+    background-color: black;
+    border-radius: 20px;
+    display: none;
+    line-height: 0;
+    position: absolute;
+    top: 22.5%;
+    z-index: 1;
+}
+.new_note_head{
+    display: flex;
+}
+.new_note_title{
+    width: 100%;
+    height: 11.5vh;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom:1px solid gray;
+    font-size:40px;
+    border-radius: 20px 20px 0px 0px;
+    padding: 0px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
+    color: white;
+}
+.new_note_text{
+    width: 100%;
+    height: 39.5vh;
+    resize: none;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size:18px;
+    background: transparent;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    border-bottom:1px solid gray;
+}
+.new_note_body{
+    display: block;
+}
+.new_note_control{
+    display: flex;
+    /* background-color: blue; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 0px 0px 20px 20px;
+    margin-right: 2px;
+}
+.quote{
+    font-size: 90%;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    color: rgb(145, 144, 144);
+    height: 2vh;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+    margin-left: 10%;
+}
+.buttons{
+    display: flex;
+    padding-right: 10px;
+    gap: 10px;
+}
+.buttons:hover{
+    cursor: pointer;
+}
+.new_note_close{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: fit-content;
+  font-size:x-large ;
+  padding: 2px 8px;
+  color: wheat;
+  transition: all ease 5s;
+}
+.new_note_close:hover::after{
+    content: 'back';
+    margin-bottom: 20%;
+    margin-left: 10%;
+    font-size: 75%;
+}
+.new_note_save{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: fit-content;
+  font-size:x-large ;
+  padding: 2px 8px;
+  color: wheat;
+}
+.new_note_save:hover::after{
+    content: 'save';
+    margin-bottom: 22%;
+    margin-left: 10%;
+    font-size: 80%;
+}
+
+/* mynotes css */
+.mynotes_main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mynotes_container{
+    height: 55%;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    display: none;
+    /* padding: 5px 2px ; */
+    line-height: 0;
+    position: absolute;
+    top: 22.5%;
+}
+.mynotes_body{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.mynotes_heading{
+    background-color: black;
+    border-bottom: 1px solid gray;
+    color: white;
+    height: 50px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.mynotes_holder{
+    height: 80.5%;
+    width: 100%;
+    background-color: black;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    border-bottom: 1px solid gray;
+}
+.note{
+    height: 30%;
+    width: 96%;
+    /* background-color: aqua; */
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.note .note_content{
+   /* background-color: yellow; */
+   height: 100%;
+   width: 100%;
+   display: block;
+}
+.note_head_holder{
+    background-color: rgba(99, 97, 97, 0.792);
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-left:1%;
+    color: white;
+    font-family: sans-serif;
+    font-size: large;
+}
+.note_body{
+    background-color: rgba(99, 97, 97, 0.792);
+    width: 100%;
+    height: 8vh;
+    padding-top: 10px;
+    border-radius: 0px 0px 20px 20px;
+    padding-left:1%;
+    padding-top: 2%;
+    color: white;
+    font-family: sans-serif;
+}
+.note .delete{
+    /* background-color: wheat; */
+    height: 5vh;
+    width: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+    margin-top: 10px;
+    color: rgb(224, 212, 212);
+}
+.delete:hover{
+    cursor: pointer;
+}
+.mynotes_control{
+    display: flex;
+    background-color: black;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 0px 0px 20px 20px;
+    margin-right: 2px;
+}
+.mynotes_close{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: fit-content;
+  font-size:x-large ;
+  padding: 2px 8px;
+  color: wheat;
+  /* background-color: brown; */
+  /* gap: 10px; */
+}
+.mynotes_close:hover::after{
+    content: 'back';
+    margin-bottom: 22%;
+    margin-left: 10%;
+    font-size: 80%;
+    transition: all ease 5s;
+}
+.emptytext{
+    color: rgba(247, 245, 245, 0.126);
+    height: 80.5%; 
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+.toast_holder{
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 15.5%;
+    left: 45%;
+    padding: 0.8%;
+    gap: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transform: translateY(100%);
+    animation: open 1s linear forwards;
+}
+@keyframes open{
+    100%{
+        transform:translateY(0) ;
+    }
+}
+.toast_holder::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: green;
+    height: 5px;
+    border-radius: 0px 0px 0px 5px;
+    animation: anim 5s 1s normal;
+}
+@keyframes anim {
+    100%{
+        width: 0%;
+    }
+}
+.toast_icon{
+    color: green;
+    text-shadow: 0px 0px 5px rgb(145, 144, 144);
+}
