@@ -25,10 +25,6 @@ git clone https://github.com/dev-kdarshan/notesapp
 cd notesapp
 3. Open the `index.html` file in any modern web browser.
 
-## Screenshots
-
-*(Add screenshots of the notes interface to showcase functionality and UI.)*
-
 ## Author
 
 Developed by [Darshan Khute](https://github.com/dev-kdarshan)
